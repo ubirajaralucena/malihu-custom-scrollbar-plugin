@@ -1301,7 +1301,7 @@ and dependencies (minified).
 			function _onTouchmove(e){
 				if(!_pointerTouch(e) || touchActive || _coordinates(e)[2]){return;}
 				if(!o.documentTouchScroll){e.preventDefault();} 
-				e.stopImmediatePropagation();
+				//e.stopImmediatePropagation();
 				if(docDrag && !touchDrag){return;}
 				if(draggable){
 					runningTime=_getTime();
@@ -1335,7 +1335,7 @@ and dependencies (minified).
 			function _onTouchstart2(e){
 				if(!_pointerTouch(e) || touchActive || _coordinates(e)[2]){touchable=0; return;}
 				touchable=1;
-				e.stopImmediatePropagation();
+				//e.stopImmediatePropagation();
 				_stop($this);
 				startTime=_getTime();
 				var offset=mCustomScrollBox.offset();
@@ -1346,7 +1346,7 @@ and dependencies (minified).
 			function _onTouchend(e){
 				if(!_pointerTouch(e) || touchActive || _coordinates(e)[2]){return;}
 				draggable=0;
-				e.stopImmediatePropagation();
+				//e.stopImmediatePropagation();
 				touchDrag=0; docDrag=0;
 				endTime=_getTime();
 				var offset=mCustomScrollBox.offset(),y=_coordinates(e)[0]-offset.top,x=_coordinates(e)[1]-offset.left;
